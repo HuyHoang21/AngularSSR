@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [ 
   {path :'', component: HomeComponent},
-  { path: 'users', loadChildren: () => import('./users/users.module').then(x => x.UsersModule)},
+  //{ path: 'users', loadChildren: () => import('./users/users.module').then(x => x.UsersModule)},
     // otherwise redirect to home
   { path: '**', redirectTo: '' }
   ];

@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home/home.component';
+import { ListComponent } from './users/list.component';
 @NgModule({
   declarations: [
         AppComponent,
         AlertComponent,
         HomeComponent,
+        ListComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

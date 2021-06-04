@@ -15,7 +15,7 @@ import { AddEditComponent } from './add-edit.component';
     ],
     declarations: [
         LayoutComponent,
-        ListComponent,
+        // ListComponent,
         AddEditComponent
     ]
 })

@@ -1,13 +1,16 @@
-﻿import { Component, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
+﻿import { Component, ComponentFactoryResolver, OnInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../_services';
-import { User} from '../_models'
+import { AddEditComponent } from './add-edit.component';
 @Component({ templateUrl: 'list.component.html' })
 export class ListComponent implements OnInit {
     users: any;
 
-    constructor(private userService: UserService,private router: Router) {}
+    constructor(
+        private userService: UserService,
+        private viewContainerRef: ViewContainerRef,
+        private cfr: ComponentFactoryResolver) 
+    {}
 
     ngOnInit() {
         this.userService.getAll()
@@ -19,8 +22,5 @@ export class ListComponent implements OnInit {
         user.isDeleting = true;
         this.userService.delete(id)
             .subscribe(() => this.users = this.users.filter(x => x.Id !== id));
-    }
-    logout() {
-        this.router.navigate(['/login']);
     }
 }
