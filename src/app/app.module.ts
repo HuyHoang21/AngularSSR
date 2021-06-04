@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './users/list.component';
+import { AddEditComponent } from './users/add-edit.component';
 @NgModule({
   declarations: [
         AppComponent,
         AlertComponent,
         HomeComponent,
         ListComponent,
+        AddEditComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
